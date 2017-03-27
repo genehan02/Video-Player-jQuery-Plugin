@@ -1,0 +1,113 @@
+/*=============================
+Resets
+==============================*/
+body {
+	margin: 0;
+	padding: 0 25px;
+	background: #F1F2F2;
+	color: #7F7F7F;
+	font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	width: 100%;
+	padding: 15px;
+}
+
+/*=============================
+Container
+==============================*/
+.vpp-container {
+	background-color: #D7E2ED;
+	min-width: 320px;
+	width: 70%;
+	max-width: 70%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.vpp-container.full-screen-toggle {
+	width: 100%;
+	max-width: none;
+}
+
+/*=============================
+Video Player
+==============================*/
+.vpp-container .video {
+	display: block;
+	width: 100%;
+}
+.vpp-container .video:focus {
+	outline: none;
+}
+
+/*=============================
+Video Controls
+==============================*/
+.vpp-control-bar {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.vpp-seek-slider {
+	padding: 2px 0 0;
+	margin: 0 auto;
+	display: block;
+	width: 99%;
+}
+.vpp-control-items-left,
+.vpp-control-items-right {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	height: 100%;
+	overflow: hidden;
+	float: left;
+}
+.vpp-control-items-right {
+	float: right;
+}
+.vpp-control-item {
+	line-height: 20px;
+	background-color:  #D7E2ED;
+	margin: 0 5px;
+	cursor: pointer;
+	float: left;
+}
+.vpp-time-con {
+	font-size: 10px;
+	cursor: text;
+}
+
+/*=============================
+Video Control Image Sprites
+==============================*/
+.vpp-control-item .sprite {
+	background-image: url(../player-control-images/spritesheet.png);
+	background-repeat: no-repeat;
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+/* Play/Pause */
+.vpp-control-item .play-btn {
+	background-position: -530px -50px;
+}
+.vpp-control-item .play-btn.show-pause-btn {
+	background-position: -410px -50px;
+}
+/* Volume */
+.vpp-control-item .unmute-btn {
+	background-position: -290px -50px;
+}
+.vpp-control-item .unmute-btn.muted {
+	background-position: -650px -50px;
+}
+/* Fullscreen */
+.vpp-control-item .fullscreen-enter-btn {
+	background-position: -50px -50px;
+}
+.vpp-control-item .fullscreen-enter-btn.full-screen-toggle {
+	background-position: -170px -50px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Video Player</title>
+	<link rel="stylesheet" href="styles/videoPlayerPlugin.css">
+</head>
+<body>
+	<div class="vpp-container">
+		<video class="video" tabindex="1">
+			<source class="video-source-mp4" src="" type="video/mp4">
+			<source class="video-source-webm" src="" type="video/webm">
+			<source class="video-source-ogg" src="" type="video/ogg">
+		</video>
+		<div class="vpp-control-bar">
+			<input type="range" class="vpp-seek-slider" min="0" value="0" step="1" />
+			<ul class="vpp-control-items-left">
+				<li class="vpp-control-item vpp-play-btn"><i class="sprite play-btn" alt="Play"></i></li>
+				<li class="vpp-control-item vpp-time-con"><span class="vpp-time-current">0:00</span> / <span class="time-duration"></span></li>
+			</ul>
+			<ul class="vpp-control-items-right">
+				<li class="vpp-control-item vpp-volume-btn"><i class="sprite unmute-btn" alt=""></i></li>
+				<li class="vpp-control-item vpp-volume-slider"><input type="range" min="0" max="100" value="50" step="1"></li>
+				<li class="vpp-control-item vpp-full-screen-btn"><i class="sprite fullscreen-enter-btn" alt=""></i></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/videoPlayerPlugin.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var video = $(".vpp-container").videoPlayerPlugin({
+				videoSources: {
+					"video/mp4": "videos/big_buck_bunny.mp4",
+					"video/webm": "videos/big_buck_bunny.webm",
+					"video/ogg": "videos/big_buck_bunny.ogv"
+				},
+			 	autoPlay: true
+			});
+		});
+	</script>
+</body>
+</html>
